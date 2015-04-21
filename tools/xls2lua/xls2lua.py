@@ -151,6 +151,8 @@ def write_table(luaT, luaN, outfile = '-', withfunc = True):
 		
 		#第一行为参考
 		head = sheet.get(0)
+		if head is None:
+			break;
 		max_row = len(head)
 		for rowidx, row in sheet.iteritems():
 			#Notify: from row 3 start; index start from 0
