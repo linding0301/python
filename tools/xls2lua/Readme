@@ -1,5 +1,3 @@
-python: excel转lua工具
-
 # 准备
 安装xlrd(https://pypi.python.org/pypi/xlrd)
 
