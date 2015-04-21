@@ -151,6 +151,8 @@ def write_table(luaT, luaN, outfile = '-', withfunc = True):
 		
 		#第一行为参考
 		head = sheet.get(0)
+		if head is None:
+			break;
 		max_row = len(head)
 		for rowidx, row in sheet.iteritems():
 			#Notify: from row 3 start; index start from 0
@@ -188,6 +190,7 @@ def transfer(dir_src, dir_dst):
 		dir_dst = dir_dst + "\\"
 	names = os.listdir(dir_src)
 	for name in names:
+		print("file: %s" % name)
 		name_temp = dir_src + "\\" + name
 
 		if os.path.isdir(name_temp): 
